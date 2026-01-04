@@ -258,5 +258,43 @@ AtrL["your auction on"] = "你拍賣於"
 AtrL["your most recent posting"] = "你最近的拍賣"
 AtrL["yours"] = "你的"
 
+--AuctionatorConfig.lua
+--submenu: Data reset
+ AtrL["Data reset"] = "資料重置"
+ AtrL["DATA_RESET_EXPLANATION"] = "以下功能將協助你清除 Auctionator 儲存的資料。\n"
+                                  .."通常只在資料損壞時才需要使用此功能。"
+ AtrL["Clear Scanning History"] = "清除掃描歷史"
+ AtrL["Clear Posting History"] = "清除拍賣歷史"
+ AtrL["Clear Stacking Preferences"] = "清除堆疊偏好設定"
+ AtrL["Clear Shopping Lists"] = "清除購物清單"
+ AtrL["CLEAR_SCANNED_CONFIRM_NOTICE2"] = "這將清除你所有角色、所有物品的價格歷史記錄\n"
+                                         .."——即使是在其他伺服器的角色。"
+ AtrL["CLEAR_POST_CONFIRM_NOTICE2"] = "這將清除 Auctionator 為你所有已售出物品所保存的\n"
+                                      .."資訊（如掃描後在'其他'標籤頁中顯示的資訊）。"
+ AtrL["CLEAR_STACK_PREF_NOTICE2"] = "這會將你的堆疊偏好設定重置為預設值。\n"
+                                    .."使用此選項相當安全。"
+ AtrL["CLEAR_SHOPLIST_NOTICE2"] = "如果你花費了大量時間建立詳細的購物清單，\n"
+                                  .."這將需要你從頭開始重新建立它們。"
+ AtrL["Clear It!"] = "清除！"
+ AtrL["Are you sure you want to clear the scanned prices database?"] = "您確定要清除掃描價格資料庫嗎？"
+ AtrL["Are you sure you want to clear the posting history?"] = "您確定要清除拍賣歷史嗎？"
+ AtrL["Are you sure you want to clear your stacking preferences?"] = "您確定要清除您的堆疊偏好設定嗎？"
+ AtrL["Are you sure you want to clear your shopping lists?"] = "您確定要清除您的購物清單嗎？"
 
+--submenu: Shopping Lists
+ AtrL["Delete"] = "刪除"
+ AtrL["Edit"] = "編輯"
+ AtrL["Export"] = "匯出"
+ AtrL["Import"] = "匯入"
+ AtrL["Name for your new shopping list"] = "您的新購物清單名稱"
+ AtrL["New"] = "新增"
+ AtrL["New name for this list"] = "此清單的新名稱"
+ AtrL["New Shopping List"] = "新購物清單"
+ AtrL["Really delete the shopping list?%s"] = "確定要刪除購物清單嗎？%s"
+ AtrL["Rename"] = "重新命名"
+ AtrL["Shopping Lists"] = "購物清單"
+
+--submenu: Database
+ AtrL["Database"] = "資料庫"
+-- (end auto-translated)
 end

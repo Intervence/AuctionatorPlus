@@ -236,5 +236,44 @@ AtrL["undercutting configuration saved"] = ""
 AtrL["You do not have enough gold\n\nto make any more purchases."] = ""
 AtrL["You may have at most 40 single-stack (x1)\nauctions posted for this item.\n\nYou already have %d such auctions and\nyou are trying to post %d more."] = ""
 
+--AuctionatorConfig.lua
+--submenu: Data reset
+ AtrL["Data reset"] = "Återställ data"
+ AtrL["DATA_RESET_EXPLANATION"] = "Funktionerna nedan hjälper dig att rensa data som Auctionator sparar.\n"
+                                  .."Vanligtvis behövs detta endast om datan blir korrupt."
+ AtrL["Clear Scanning History"] = "Rensa skanningshistorik"
+ AtrL["Clear Posting History"] = "Rensa försäljningshistorik"
+ AtrL["Clear Stacking Preferences"] = "Rensa staplningsinställningar"
+ AtrL["Clear Shopping Lists"] = "Rensa inköpslistor"
+ AtrL["CLEAR_SCANNED_CONFIRM_NOTICE2"] = "Rensar prismhistoriken för alla föremål för alla dina\n"
+                                         .."karaktärer – även på andra servrar."
+ AtrL["CLEAR_POST_CONFIRM_NOTICE2"] = "Rensar informationen som Auctionator sparar om alla föremål\n"
+                                      .."du sålt (som visas på fliken 'Annat' efter en skanning)."
+ AtrL["CLEAR_STACK_PREF_NOTICE2"] = "Återställer dina staplningsinställningar till standard.\n"
+                                    .."Detta är en ganska säker åtgärd."
+ AtrL["CLEAR_SHOPLIST_NOTICE2"] = "Om du lagt ner mycket tid på att bygga detaljerade inköpslistor\n"
+                                  .."kommer du att behöva skapa om dem från början."
+ AtrL["Clear It!"] = "Rensa!"
+ AtrL["Are you sure you want to clear the scanned prices database?"] = "Är du säker på att du vill rensa databasen med skannade priser?"
+ AtrL["Are you sure you want to clear the posting history?"] = "Är du säker på att du vill rensa din försäljningshistorik?"
+ AtrL["Are you sure you want to clear your stacking preferences?"] = "Är du säker på att du vill rensa dina staplningsinställningar?"
+ AtrL["Are you sure you want to clear your shopping lists?"] = "Är du säker på att du vill rensa dina inköpslistor?"
 
+--submenu: Shopping Lists
+ AtrL["Delete"] = "Radera"
+ AtrL["Edit"] = "Redigera"
+ AtrL["Export"] = "Exportera"
+ AtrL["Import"] = "Importera"
+ AtrL["Name for your new shopping list"] = "Namn för din nya inköpslista"
+ AtrL["New"] = "Ny"
+ AtrL["New name for this list"] = "Nytt namn för den här listan"
+ AtrL["New Shopping List"] = "Ny inköpslista"
+ AtrL["Really delete the shopping list?%s"] = "Vill du verkligen radera inköpslistan?%s"
+ AtrL["Rename"] = "Byt namn"
+ AtrL["Shopping Lists"] = "Inköpslistor"
+
+-- submenu: Database
+AtrL["Database"] = "Databas"
+
+--(end auto-translated)
 end

@@ -3088,7 +3088,7 @@ function Atr_UpdateUI ()
 			if (Atr_IsModeBuy()) then
 
 				if (gCurrentPane.activeSearch.searchText == "") then
-					Atr_SetMessage (ZT("Select an item from the list on the left\n or type a search term above to start a scan."));
+					Atr_SetMessage (ZT("Select an item from the list on the left\n or type a search term above to start a scan.\n\n\nTip: use \"name\" for exact match"));
 				end
 			end
 		

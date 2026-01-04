@@ -816,7 +816,7 @@ function Atr_OnClick_ClearHistory(self)
 	ShowInterfaceOptionsMask();
 
 	Atr_ClearConfirm_Text1:SetText (ZT("Are you sure you want to clear the scanned prices database?"))
-	Atr_ClearConfirm_Text2:SetText (ZT("This will clear the pricing history for all items for all your characters - even characters on different servers."))
+	Atr_ClearConfirm_Text2:SetText (ZT("CLEAR_SCANNED_CONFIRM_NOTICE2"))
 
 	gAtr_ConfirmYesAction = function ()
 
@@ -838,7 +838,7 @@ function Atr_OnClick_ClearPostHistory(self)
 	ShowInterfaceOptionsMask();
 
 	Atr_ClearConfirm_Text1:SetText (ZT("Are you sure you want to clear the posting history?"))
-	Atr_ClearConfirm_Text2:SetText (ZT("This will clear the information that Auctionator keeps for all items that you've posted - as shown on the \"Other\" tab after you scan for an item that you've sold in the past."))
+	Atr_ClearConfirm_Text2:SetText (ZT("CLEAR_POST_CONFIRM_NOTICE2"))
 
 	gAtr_ConfirmYesAction = function ()
 
@@ -859,7 +859,7 @@ function Atr_OnClick_ClearStackPrefs(self)
 	ShowInterfaceOptionsMask();
 
 	Atr_ClearConfirm_Text1:SetText (ZT("Are you sure you want to clear your stacking preferences?"))
-	Atr_ClearConfirm_Text2:SetText (ZT("Go ahead - this isn't a big deal.  Auctionator will figure it out again fairly quickly.  This is just some info Auctionator keeps to help it set the default stack size a bit more intelligently."))
+	Atr_ClearConfirm_Text2:SetText (ZT("CLEAR_STACK_PREF_NOTICE2"))
 
 	gAtr_ConfirmYesAction = function ()
 
@@ -879,7 +879,7 @@ function Atr_OnClick_ClearShopLists(self)
 	ShowInterfaceOptionsMask();
 
 	Atr_ClearConfirm_Text1:SetText (ZT("Are you sure you want to clear your shopping lists?"))
-	Atr_ClearConfirm_Text2:SetText (ZT("If you put a lot of time into constructing detailed shopping lists, this will require you to buidl them all over again."))
+	Atr_ClearConfirm_Text2:SetText (ZT("CLEAR_SHOPLIST_NOTICE2"))
 
 	gAtr_ConfirmYesAction = function ()
 
@@ -1091,7 +1091,7 @@ StaticPopupDialogs["ATR_DEL_SHOPPING_LIST"] = {
 	end,
 	OnShow = function(self)
 		local name = AUCTIONATOR_SHOPPING_LISTS[gShplistIndexToDelete].name
-		local s = string.format (ZT("Really delete the shopping list %s ?"), ": \n\n"..name);
+		local s = string.format (ZT("Really delete the shopping list?%s"), ": \n\n"..name);
 		self.text:SetText("\n"..s.."\n\n");
 	end,
 	timeout = 0,
@@ -1118,7 +1118,7 @@ local gShplistIndexToRename
 -----------------------------------------
 
 StaticPopupDialogs["ATR_RENAME_SHOPPING_LIST"] = {
-	text = "New name for this list",
+	text = ZT("New name for this list"),
 	button1 = OKAY,
 	button2 = CANCEL,
 	OnAccept = function(self)

@@ -20,7 +20,6 @@ AtrL["Wowecon global price"] = "WoWecon globaler Preis"
 AtrL["Wowecon server price"] = "WoWecon Serverpreis"
 
 AtrL["No current auctions with buyouts found"] = "Keine aktuellen Sofortkauf-Auktionen gefunden."
-AtrL["Really delete the shopping list %s ?"] = "Einkaufsliste wirklich löschen?"
 AtrL["There is a more recent version of Auctionator: VERSION"] = "Es gibt eine neuere Version von Auctionator: VERSION"
 AtrL["You can buy at most %d auctions"] = "Du kannst maximal %d Auktionen kaufen"            -- don't overspend!
 AtrL["You can create at most %d auctions"] = "Du kannst maximal %d Auktionen erstellen"
@@ -53,9 +52,6 @@ AtrL["no buyout price"] = "kein Sofortkauf"
 AtrL["Add Item To List"] = "Zur Liste hinzufügen"
 AtrL["Remove Item From List"] = "Item von der Liste entfernen"
 AtrL["Delete Shopping List"] = "Einkaufsliste löschen"
-AtrL["New Shopping List"] = "Neue Einkaufsliste"
-
-AtrL["Name for your new shopping list"] = "Name der neuen Einkaufsliste"
 
 AtrL["stack for"] = "Stack für"            -- information on the shopping dialogue
 AtrL["stacks for"] = "Stacks für"        -- e.g. "buy 3 stacks for 45g"
@@ -225,8 +221,6 @@ AtrL["scanning options saved"] = "Scaneinstellungen gespeichert"
 AtrL["Selling"] = "Verkaufen"
 AtrL["Configure how you typically like to sell the items listed below."] = "Stelle deine üblichen Verkaufsoptionen unten ein."
 AtrL["Category"] = "Kategorie"
-AtrL["Edit"] = "Bearbeiten"
-AtrL["New"] = "Neu"
 AtrL["Forget this Item"] = "Dieses Item ignorieren."
 AtrL["default behavior"] = "Standardverhalten"
 AtrL["1 stack"] = "1 Stack"
@@ -273,5 +267,43 @@ AtrL["stacks for:"] = "Stacks für:"
 AtrL["Stop Checking"] = "Überprüfung abbrechen"
 AtrL["trade volume"] = "Handelsvolumen"
 
+--AuctionatorConfig.lua
+-- submenu: Data reset (auto-translated)
+ AtrL["Data reset"] = "Daten zurücksetzen"
+ AtrL["DATA_RESET_EXPLANATION"] = "Die folgenden Optionen löschen Daten, die Auctionator speichert.\n"
+                                  .."Normalerweise ist dies nur nötig, wenn die Daten fehlerhaft sind."
+ AtrL["Clear Scanning History"] = "Scanverlauf löschen"
+ AtrL["Clear Posting History"] = "Verkaufsverlauf löschen"
+ AtrL["Clear Stacking Preferences"] = "Stapel-Einstellungen löschen"
+ AtrL["Clear Shopping Lists"] = "Einkaufslisten löschen"
+ AtrL["CLEAR_SCANNED_CONFIRM_NOTICE2"] = "Löscht die Preishistorie aller Gegenstände für alle\n"
+                                         .."deine Charaktere – auch auf anderen Servern."
+ AtrL["CLEAR_POST_CONFIRM_NOTICE2"] = "Löscht alle gespeicherten Informationen zu verkauften\n"
+                                      .."Gegenständen (siehe 'Andere' Reiter nach einem Scan)."
+ AtrL["CLEAR_STACK_PREF_NOTICE2"] = "Setzt deine Stapel-Einstellungen auf Standard zurück.\n"
+                                    .."Diese Option ist recht sicher."
+ AtrL["CLEAR_SHOPLIST_NOTICE2"] = "Wenn du viel Zeit in detaillierte Einkaufslisten investiert hast,\n"
+                                  .."musst du sie nach dieser Aktion komplett neu erstellen."
+ AtrL["Clear It!"] = "Löschen!"
+ AtrL["Are you sure you want to clear the scanned prices database?"] = "Bist du sicher, dass du die Scan-Preisdatenbank löschen möchtest?"
+ AtrL["Are you sure you want to clear the posting history?"] = "Bist du sicher, dass du den Verkaufsverlauf löschen möchtest?"
+ AtrL["Are you sure you want to clear your stacking preferences?"] = "Bist du sicher, dass du deine Stapel-Einstellungen löschen möchtest?"
+ AtrL["Are you sure you want to clear your shopping lists?"] = "Bist du sicher, dass du deine Einkaufslisten löschen möchtest?"
 
+--submenu: Shopping Lists
+ AtrL["Delete"] = "Löschen"
+ AtrL["Edit"] = "Bearbeiten"
+ AtrL["Export"] = "Exportieren"
+ AtrL["Import"] = "Importieren"
+ AtrL["Name for your new shopping list"] = "Name für deine neue Einkaufsliste"
+ AtrL["New"] = "Neu"
+ AtrL["New name for this list"] = "Neuer Name für diese Liste"
+ AtrL["New Shopping List"] = "Neue Einkaufsliste"
+ AtrL["Really delete the shopping list?%s"] = "Einkaufsliste wirklich löschen?%s"
+ AtrL["Rename"] = "Umbenennen"
+ AtrL["Shopping Lists"] = "Einkaufslisten"
+
+-- submenu: Database
+AtrL["Database"] = "Datenbank"
+--(end auto-translated)
 end

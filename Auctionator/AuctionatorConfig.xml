@@ -1,7 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 
-
-
 	<Frame name="Atr_UIOptionsFrame">
 		<Scripts>
 			<OnLoad>
@@ -655,32 +653,32 @@
 
 		<Scripts>
 			<OnLoad>
-				Atr_LoadOptionsSubPanel (self, ZT("Clears"), ZT("Clears"), ZT("The features below will help you clear out data that Auctionator stores.  Typically you would only need this in the event that that data gets corrupted."));
+				Atr_LoadOptionsSubPanel (self, ZT("Data reset"), ZT("Data reset"), ZT("DATA_RESET_EXPLANATION"));
 			</OnLoad>
 		</Scripts>
 
 		<Frames>
 			<Button inherits="UIPanelButtonTemplate" text="Clear Scanning History">
-				<Size x="300" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="30" y="-120"/></Anchor></Anchors>
+				<Size x="250" y="38"/>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="110" y="-170"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearHistory"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Posting History">
-				<Size x="300" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="30" y="-160"/></Anchor></Anchors>
+				<Size x="250" y="38"/>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="110" y="-210"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearPostHistory"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Stacking Preferences">
-				<Size x="300" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="30" y="-200"/></Anchor></Anchors>
+				<Size x="250" y="38"/>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="351" y="-170"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearStackPrefs"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Shopping Lists">
-				<Size x="300" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="30" y="-240"/></Anchor></Anchors>
+				<Size x="250" y="38"/>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="351" y="-210"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearShopLists"/></Scripts>
 			</Button>
 		</Frames>
@@ -689,7 +687,7 @@
    <!-- Are You Sure? screen --> 
 
 	<Frame name="Atr_ConfirmClear_Frame" toplevel="true" parent="AuctionatorResetsFrame" frameStrata="FULLSCREEN_DIALOG" enableMouse="true" hidden="true">
-		<Size x="430" y="200" />
+		<Size x="480" y="200" />
 		<Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="-20" y="-60"/></Offset></Anchor></Anchors>
 
 		<Backdrop bgFile="Interface\CharacterFrame\UI-Party-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
@@ -717,7 +715,7 @@
 				<Scripts><OnClick function="Atr_OnClick_ClearConfirm_Hide"/></Scripts>
 			</Button>
 
-			<Button inherits="UIPanelButtonTemplate" text="Clear It">
+			<Button name="Atr_OnClick_ClearConfirm_Yes" inherits="UIPanelButtonTemplate" text="Clear It!">
 				<Size x="120" y="22"/>
 				<Anchors><Anchor point="RIGHT" relativePoint="LEFT" relativeTo="Atr_ClearConfirm_Cancel"><Offset><AbsDimension x="-5" y="0"/></Offset></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearConfirm_Yes"/></Scripts>
@@ -743,17 +741,17 @@
 			<Layer level="BACKGROUND">
 				<FontString text="Select multiple shopping lists by holding down the control key while clicking" inherits="GameFontDarkGraySmall">
 					<Size x="125"/>
-					<Anchors><Anchor point="BOTTOMRIGHT" x="-30" y="26"/></Anchors>
+					<Anchors><Anchor point="BOTTOMRIGHT" x="-20" y="12"/></Anchors>
 				</FontString>
 			</Layer>
 		</Layers>
 
 		<Frames>
 			<ScrollFrame name="Atr_ShpList_ScrollFrame" inherits="FauxScrollFrameTemplate">
-				<Size x="180"/>
+				<Size x="30"/>
 				<Anchors>
 					<Anchor point="TOPLEFT"><Offset><AbsDimension x="20" y="-95"/></Offset></Anchor>
-					<Anchor point="BOTTOM"><Offset><AbsDimension y="30"/></Offset></Anchor>
+					<Anchor point="BOTTOM"><Offset><AbsDimension x="-100" y="30"/></Offset></Anchor>
 				</Anchors>
 
 				<Scripts>
@@ -766,46 +764,53 @@
 			<Frame name="Atr_ShpList_Frame">
 				<Anchors>
 					<Anchor relativeTo="Atr_ShpList_ScrollFrame" point="TOPLEFT" relativePoint="TOPLEFT"><Offset x="-5" y="5"/></Anchor>
-					<Anchor relativeTo="Atr_ShpList_ScrollFrame" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"><Offset x="27" y="-5"/></Anchor>
+					<Anchor relativeTo="Atr_ShpList_ScrollFrame" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT"><Offset y="-5"/></Anchor>
 				</Anchors>
-				<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border"><EdgeSize><AbsValue val="16"/></EdgeSize></Backdrop>			
+				<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border"><EdgeSize><AbsValue val="10"/></EdgeSize></Backdrop>			
 			</Frame>
 
-
-			<Button name="Atr_ShpList_DeleteButton" inherits="UIPanelButtonTemplate" text="Delete">
+<!-- TODO: Does nothing except opening new frames -->
+			<Button name="Atr_ShpList_ImportButton" inherits="UIPanelButtonTemplate" text="Import">
 				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-95"/></Anchor></Anchors>
-				<Scripts><OnClick function="Atr_OnClick_ShpList_Delete"/></Scripts>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="15" y="-65"/></Anchor></Anchors>
+				<Scripts>
+					<OnLoad>self:Disable()</OnLoad> 
+					<OnClick function="Atr_OnClick_ShpList_Import"/>
+				</Scripts>
+			</Button>
+
+			<Button name="Atr_ShpList_ExportButton" inherits="UIPanelButtonTemplate" text="Export">
+				<Size x="100" y="22"/>
+				<Anchors><Anchor point="TOPLEFT"><Offset x="116" y="-65"/></Anchor></Anchors>
+				<Scripts>
+					<OnLoad>self:Disable()</OnLoad> 
+					<OnClick function="Atr_OnClick_ShpList_Export"/>
+				</Scripts>
+			</Button> 
+<!-- /TODO -->
+
+			<Button name="Atr_ShpList_NewButton" inherits="UIPanelButtonTemplate" text="New">
+				<Size x="100" y="22"/>
+				<Anchors><Anchor point="TOPRIGHT"><Offset x="-50" y="-95"/></Anchor></Anchors>
+				<Scripts><OnClick function="Atr_OnClick_ShpList_New"/></Scripts>
 			</Button>
 
 			<Button name="Atr_ShpList_EditButton" inherits="UIPanelButtonTemplate" text="Edit">
 				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-125"/></Anchor></Anchors>
+				<Anchors><Anchor point="TOPRIGHT"><Offset x="-50" y="-119"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ShpList_Edit"/></Scripts>
 			</Button>
 
 			<Button name="Atr_ShpList_RenameButton" inherits="UIPanelButtonTemplate" text="Rename">
 				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-155"/></Anchor></Anchors>
+				<Anchors><Anchor point="TOPRIGHT"><Offset x="-50" y="-143"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ShpList_Rename"/></Scripts>
 			</Button>
 
-			<Button name="Atr_ShpList_ImportButton" inherits="UIPanelButtonTemplate" text="New">
+			<Button name="Atr_ShpList_DeleteButton" inherits="UIPanelButtonTemplate" text="Delete">
 				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-185"/></Anchor></Anchors>
-				<Scripts><OnClick function="Atr_OnClick_ShpList_New"/></Scripts>
-			</Button>
-
-			<Button name="Atr_ShpList_ImportButton" inherits="UIPanelButtonTemplate" text="Import">
-				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-215"/></Anchor></Anchors>
-				<Scripts><OnClick function="Atr_OnClick_ShpList_Import"/></Scripts>
-			</Button>
-
-			<Button name="Atr_ShpList_ExportButton" inherits="UIPanelButtonTemplate" text="Export">
-				<Size x="100" y="22"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="270" y="-245"/></Anchor></Anchors>
-				<Scripts><OnClick function="Atr_OnClick_ShpList_Export"/></Scripts>
+				<Anchors><Anchor point="TOPRIGHT"><Offset x="-50" y="-167"/></Anchor></Anchors>
+				<Scripts><OnClick function="Atr_OnClick_ShpList_Delete"/></Scripts>
 			</Button>
 
 		</Frames>
@@ -868,7 +873,7 @@
 				<Size x="180"/>	
 				<Anchors>
 					<Anchor point="TOPLEFT"><Offset x="50" y="-62"/></Anchor>
-					<Anchor point="BOTTOM"><Offset y="31"/></Anchor>
+					<Anchor point="BOTTOM"><Offset y="50"/></Anchor>
 				</Anchors>
 				<Backdrop bgFile="Interface\CharacterFrame\UI-Party-Background" tile="true">
 					<BackgroundInsets><AbsInset left="-20" right="-23" top="-3" bottom="-3"/></BackgroundInsets>
@@ -908,9 +913,9 @@
 			</ScrollFrame>
 
 
-			<Button inherits="UIPanelButtonTemplate" text="CANCEL">
-				<Size x="120" y="22"/>
-				<Anchors><Anchor point="BOTTOMRIGHT"><Offset x="-30" y="30"/></Anchor></Anchors>
+			<Button name="Atr_ShpList_Cancel" inherits="UIPanelButtonTemplate" text="CANCEL">
+				<Size x="100" y="22"/>
+				<Anchors><Anchor point="BOTTOMRIGHT"><Offset x="-20" y="20"/></Anchor></Anchors>
 				<Scripts><OnClick>self:GetParent():Hide()</OnClick></Scripts>
 			</Button>
 
@@ -921,8 +926,8 @@
 			</Button>
 
 			<Button name="Atr_ShpList_SaveBut" inherits="UIPanelButtonTemplate" text="SAVE" hidden="true">
-				<Size x="120" y="22"/>
-				<Anchors><Anchor point="BOTTOMRIGHT"><Offset x="-30" y="60"/></Anchor></Anchors>
+				<Size x="100" y="22"/>
+				<Anchors><Anchor point="BOTTOMRIGHT"><Offset x="-125" y="20"/></Anchor></Anchors>
 				<Scripts><OnClick>Atr_ShpList_Edit_Save()</OnClick></Scripts>
 			</Button>
 

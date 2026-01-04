@@ -67,7 +67,7 @@ AtrL["Deposit"] = ""
 AtrL["Disenchant"] = ""
 AtrL["Drag an item you want to sell to this area."] = ""
 AtrL["Duration"] = ""
-AtrL["Edit"] = ""
+
 AtrL["Epic"] = ""
 AtrL["Epic items"] = ""
 AtrL["Flasks"] = ""
@@ -110,11 +110,9 @@ AtrL["max. stacks of %d"] = ""
 AtrL["Minimum Quality Level"] = ""
 AtrL["Minimum quality level:"] = ""
 AtrL["More"] = ""
-AtrL["Name for your new shopping list"] = ""
+
 AtrL["never"] = ""
 AtrL["Never"] = ""
-AtrL["New"] = ""
-AtrL["New Shopping List"] = ""
 AtrL["Next scan allowed:"] = ""
 AtrL["no buyout price"] = ""
 AtrL["No current auctions found"] = ""
@@ -141,7 +139,6 @@ AtrL["Processing"] = ""
 AtrL["Quest Item"] = ""
 AtrL["Rare"] = ""
 AtrL["Rare items"] = ""
-AtrL["Really delete the shopping list %s ?"] = ""
 AtrL["Recent Searches"] = ""
 AtrL["Recommended Buyout Price"] = ""
 AtrL["Recommended buyout price"] = ""
@@ -157,7 +154,6 @@ AtrL["Scanning auctions: page %d"] = ""
 AtrL["Scanning is entirely optional."] = ""
 AtrL["scanning options saved"] = ""
 AtrL["Search"] = ""
-AtrL["Select an item from the list on the left\n or type a search term above to start a scan."] = ""
 AtrL["Select the Auctionator panel to be displayed first whenever you open the Auction House window."] = ""
 AtrL["Sell"] = ""
 AtrL["Show disenchanting details"] = ""
@@ -204,5 +200,52 @@ AtrL["your auction on"] = ""
 AtrL["your most recent posting"] = ""
 AtrL["yours"] = ""
 
+--Auctionator.lua
+--submenu: Buy
+AtrL["Select an item from the list on the left\n or type a search term above to start a scan.\n\n\nTip: use \"name\" for exact match"] = ""
 
+
+--AuctionatorConfig.lua
+ AtrL["basic options saved"] = "" --109
+
+--submenu: Data reset
+
+ AtrL["Clear Posting History"] = ""
+ AtrL["CLEAR_SCANNED_CONFIRM_NOTICE2"] = "This will clear the pricing history for all items for all your \ncharacters - even characters on different servers."
+ AtrL["Clear Scanning History"] = ""
+ AtrL["Clear Shopping Lists"] = ""
+ AtrL["CLEAR_STACK_PREF_NOTICE2"] = "This will clear all settings related to\n"
+ 									.."item stack count on posting and revert\n"
+ 									.."it back to the default.\n"
+ 									.."This option is safe to use."
+ AtrL["Clear Stacking Preferences"] = ""
+
+
+ AtrL["CLEAR_POST_CONFIRM_NOTICE2"] = "This will clear the information that Auctionator keeps for all\n"
+ 									.."items that you've posted - as shown on the \"Other\" tab after\n"
+ 									.."you scan for an item that you've sold in the past."
+
+ AtrL["CLEAR_SHOPLIST_NOTICE2"]	= "If you put a lot of time into constructing detailed shopping lists,\n"
+ 								.."this will require you to build them all over again."
+ AtrL["Clear It!"] = ""
+ AtrL["Data reset"] = ""
+ AtrL["DATA_RESET_EXPLANATION"] =	"The features below will help you clear out data that Auctionator stores.\n"
+ 									.."Typically you would only need this in the event that that data gets corrupted"
+
+--submenu: Shopping Lists
+ AtrL["Delete"] = ""
+ AtrL["Edit"] = ""
+ AtrL["Export"] = ""
+ AtrL["Import"] = ""
+ AtrL["Name for your new shopping list"] = ""
+ AtrL["New"] = ""
+ AtrL["New name for this list"] = ""
+ AtrL["New Shopping List"] = ""
+ AtrL["Really delete the shopping list?%s"] = ""
+ AtrL["Rename"] = ""
+ AtrL["Shopping Lists"] = ""
+
+--submenu: Database
+ AtrL["Database"] = ""
 end
+

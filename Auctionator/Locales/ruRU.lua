@@ -1,16 +1,14 @@
 function AtrBuildLTable_ruRU ()
 
--- Translated by StingerSoft
+-- Translated by StingerSoft, Intervence
 
 AtrL = {};
 
 AtrL["SCAN_EXPLANATION"] = "Во время сканирование аукциона создаётся база данных по ценам, которую Auctionator будет использовать в двух целях:"
 					.."Для отображения в подсказке предмета цены, и рекомендуемой цены при размещении объекта, "
-					.."для которого на данный момент нету никаких аукционов."
-					.."<br/><br/>"
+					.."для которого на данный момент нету никаких аукционов.\n\n"
 					.."Сканирование, как правило, занимает около 10 секунд, но может занять больше времени, если ваш сервер очень перезружен. Помните, что Blizzard разрешает сканировать"
-					.." аукцион только один раз каждые 15 минут. "
-					.."<br/><br/>"
+					.." аукцион только один раз каждые 15 минут.\n\n"
 					.."На последок, предупреждение: если у вас низко-качественная связь, сканирования может привести к Разъединению.";
 
 
@@ -62,7 +60,6 @@ AtrL["Current"] = "Текущее"
 AtrL["Current Auctions"] = "Текущие аукционы"
 AtrL["Default Auctionator tab"] = "Окно по умолчанию"
 AtrL["default behavior"] = "по умолчанию"
-AtrL["Delete Shopping List"] = "Удалить список покупок"
 AtrL["Deposit"] = "Залог"
 AtrL["Disenchant"] = "Распыление"
 AtrL["Drag an item you want to sell to this area."] = "Перетащите в данную область предмет, который желаете продать."
@@ -70,7 +67,7 @@ AtrL["Duration"] = "Длительность"
 AtrL["Edit"] = "Править"
 AtrL["Epic"] = "Превосходное"
 AtrL["Epic items"] = "Превосходных предметов"
-AtrL["Flasks"] = "Фляги"
+AtrL["Flasks"] = "Настои"
 AtrL["For information on the latest version browse to"] = "Для получения информации о последней (Eng) версии посетите"
 AtrL["for your stack of %d"] = "для вашей стопки из %d"
 AtrL["Forget this Item"] = "Забыть этот предмет"
@@ -111,11 +108,9 @@ AtrL["Minimum Quality Level"] = "Мин. уровень качества"
 AtrL["Minimum quality level:"] = "Мин. уровень качества:"
 AtrL["More"] = "Еще"
 --AtrL["More Details"] = "Подробнее"
-AtrL["Name for your new shopping list"] = "Названия вашего нового списка покупок"
 AtrL["never"] = "Не показывать"
 AtrL["Never"] = "Никогда"
 AtrL["New"] = "Новый"
-AtrL["New Shopping List"] = "Новый список закупок"
 AtrL["Next scan allowed:"] = "Доступный скан:"
 AtrL["no buyout price"] = "нет цены выкупа"
 AtrL["No current auctions found"] = "Текущих аукционов не найдено"
@@ -142,7 +137,6 @@ AtrL["Processing"] = "Обработка"
 AtrL["Quest Item"] = "Предмет для задания"
 AtrL["Rare"] = "Редкое"
 AtrL["Rare items"] = "Редких предметов"
-AtrL["Really delete the shopping list %s ?"] = "Действительно удалить cписок закупок - %s ?"
 AtrL["Recent Searches"] = "Последнии поиски"
 AtrL["Recommended Buyout Price"] = "Рекомендуемая цена выкупа"
 AtrL["Recommended buyout price"] = "Рекомендуемая цена выкупа"
@@ -158,7 +152,6 @@ AtrL["Scanning auctions: page %d"] = "Сканирование аукциона:
 AtrL["Scanning is entirely optional."] = "Сканирование не обязательно."
 AtrL["scanning options saved"] = "Настройки сканирования - сохранены"
 AtrL["Search"] = "Поиск"
-AtrL["Select an item from the list on the left\n or type a search term above to start a scan."] = "Для сканирования, выберите предмет из списка слева\n или введите название в поиск выше."
 AtrL["Select the Auctionator panel to be displayed first whenever you open the Auction House window."] = "Выберите какое окно будет открываться по умолчанию при открытии окна аукциона."
 AtrL["Sell"] = "Продать"
 AtrL["Show disenchanting details"] = "Информация о распылении"
@@ -200,28 +193,18 @@ AtrL["You can create at most %d auctions"] = "Вы можете создать %
 AtrL["You can stack at most %d of these items"] = "Вы можете складывать в пачку не больше %d шт таких предметов"
 AtrL["You do not have enough gold\n\nto make any more purchases."] = "Вам не хватает золота,\n\nчтобы совершить еще покупки."
 AtrL["You may have at most 40 single-stack (x1)\nauctions posted for this item.\n\nYou already have %d such auctions and\nyou are trying to post %d more."] = "Вы можете иметь не более 40 однорядные (x1) аукционов относительно этого пункта. У вас уже есть% D таких аукционов, а вы пытаетесь на должность D% больше."
-AtrL["You may have no more than\n\n%d items on a shopping list."] = "Вы можете иметь не более\n\n%d предметов в вашем списке закупок"
 AtrL["your auction on"] = "ваш аукцион"
 AtrL["your most recent posting"] = "последняя запись"
 AtrL["yours"] = "ваши"
 
-
 --Auctionator.lua
 AtrL["Unknown datatype:"] = "Неизвестный тип данных:" --3396
-
---[[
-"%i %s of %i" --3361
-"stack" --3361
-]]--
-
---AuctionatorConfig.lua
-AtrL["basic options saved"] = "Основные настройки - сохранены" --109
 
 --AuctionatorHints.lua
 AtrL["defaulting to english DE mat name: "] = "Название на англ по умолчанию: " --469
 
-AtrL["About"] = "Об Auctionatorе"
-AtrL["About Auctionator"] = "Об Auctionatorе"
+AtrL["About"] = "Об Auctionator"
+AtrL["About Auctionator"] = "Об Auctionator"
 AtrL["Basic Options"] = "Основные настройки"
 AtrL["Automatically open all bags"] = "Автоматически открывать все сумки"
 AtrL["Enable alt-key shortcut"] = "Включить быструю клавишу alt"
@@ -230,10 +213,59 @@ AtrL["Undercutting"] = "Снижение цены"
 AtrL["Tooltips"] = "Подсказки"
 AtrL["Show Starting Price on the Sell Tab"] = "Показывать начальную цену во вкладке продаж"
 AtrL["Selling"] = "Продажа"
-AtrL["Configure how you typically like to sell the items listed below."] = "Тут вы можете настроить как продавать предмети преведённые ниже."
+AtrL["Configure how you typically like to sell the items listed below."] = "Тут вы можете настроить как продавать предметы, приведённые ниже."
 AtrL["Default Auctionator tab"] = "Окно по умолчанию"
 AtrL["Show auction house prices in tooltips"] = "Отображать в подсказках цену на аукционе"
 AtrL["Show disenchant prices in tooltips"] = "Отображать в подсказках стоимость распыления"
 AtrL["Show vendor prices in tooltips"] = "Отображать в подсказках цену у торговца"
+
+--Auctionator.lua
+--submenu: Buy
+AtrL["Select an item from the list on the left\n or type a search term above to start a scan.\n\n\nTip: use \"name\" for exact match"] = ""
+										.."Для сканирования, выберите предмет из списка слева\n или введите название в поиск выше."
+										.."\n\n\nСовет: используйте \"name\" (в кавычках) для точного совпадения названий"
+
+
+--AuctionatorConfig.lua
+ AtrL["basic options saved"] = "Основные настройки сохранены" --109
+ 
+--submenu: Data reset
+ AtrL["Data reset"] = "Очистка данных"
+ AtrL["DATA_RESET_EXPLANATION"] = "Данные функции позволяют очистить данные Auctionator.\n"
+                                  .."Обычно это требуется только если данные были повреждены."
+ AtrL["Clear Scanning History"] = "Очистить историю сканирований"
+ AtrL["Clear Posting History"] = "Очистить историю размещений"
+ AtrL["Clear Stacking Preferences"] = "Очистить настройки стаков"
+ AtrL["Clear Shopping Lists"] = "Очистить списки покупок"
+ AtrL["CLEAR_SCANNED_CONFIRM_NOTICE2"] = "Это очистит историю цен всех предметов для всех ваших\n"
+                                         .."персонажей, даже на других серверах."
+ AtrL["CLEAR_POST_CONFIRM_NOTICE2"] = "Очистит информацию, которую Auctionator хранит\n"
+                                      .."для всех проданных вами предметов (вкладка 'Другое'\n"
+                                      .." после скана)."
+ AtrL["CLEAR_STACK_PREF_NOTICE2"] = "Сбросит ваши настройки стаков на значения по умолчанию.\n"
+                                    .."Это достаточно безопасная опция."
+ AtrL["CLEAR_SHOPLIST_NOTICE2"] = "Если вы вложили много времени в создание списков покупок,\n"
+                                  .."покупок, после этого вам придётся создавать их заново."
+ AtrL["Clear It!"] = "Очистить!"
+ AtrL["Are you sure you want to clear the scanned prices database?"] = "Вы уверены, что хотите очистить базу данных сканированных цен?"
+ AtrL["Are you sure you want to clear the posting history?"] = "Вы уверены, что хотите очистить историю размещений?"
+ AtrL["Are you sure you want to clear your stacking preferences?"] = "Вы уверены, что хотите очистить ваши настройки стаков?"
+ AtrL["Are you sure you want to clear your shopping lists?"] = "Вы уверены, что хотите очистить ваши списки покупок?"
+
+--submenu: Shopping Lists
+ AtrL["Delete"] = "Удалить"
+ AtrL["Edit"] = "Редактировать"
+ AtrL["Export"] = "Экспорт"
+ AtrL["Import"] = "Импорт"
+ AtrL["Name for your new shopping list"] = "Название для нового списка покупок"
+ AtrL["New"] = "Создать"
+ AtrL["New name for this list"] = "Новое название для этого списка"
+ AtrL["New Shopping List"] = "Новый список покупок"
+ AtrL["Really delete the shopping list?%s"] = "Действительно удалить список покупок?%s"
+ AtrL["Rename"] = "Переименовать"
+ AtrL["Shopping Lists"] = "Списки покупок"
+
+--submenu: Database
+ AtrL["Database"] = "База данных"
 
 end
