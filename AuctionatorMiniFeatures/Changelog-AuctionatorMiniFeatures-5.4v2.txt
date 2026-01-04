@@ -1,0 +1,12 @@
+tag 5.4v2
+34b4c6e8d81c176615da5cf684f2927b1cfe06c4
+ckaotik <ckaotik@gmail.com>
+2014-07-16 07:57:07 +0200
+
+Tagging as 5.4v2
+
+
+--------------------
+
+ckaotik:
+	- Updated TOC version

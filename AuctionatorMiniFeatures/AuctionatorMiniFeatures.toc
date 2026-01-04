@@ -1,0 +1,13 @@
+## Interface: 30300
+## Author: ckaotik
+## Title: Auctionator MiniFeatures
+## Version: 5.4v2
+## OptionalDeps:
+## RequiredDeps: Auctionator
+## X-Curse-Packaged-Version: 5.4v2
+## X-Curse-Project-Name: Auctionator MiniFeatures
+## X-Curse-Project-ID: auctionator-minifeatures
+## X-Curse-Repository-ID: wow/auctionator-minifeatures/mainline
+
+auctionator.lua
+data.lua
