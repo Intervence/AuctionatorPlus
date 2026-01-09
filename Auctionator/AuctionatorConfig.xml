@@ -660,25 +660,25 @@
 		<Frames>
 			<Button inherits="UIPanelButtonTemplate" text="Clear Scanning History">
 				<Size x="250" y="38"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="110" y="-170"/></Anchor></Anchors>
+				<Anchors><Anchor point="CENTER"><Offset x="-150" y="40"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearHistory"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Posting History">
 				<Size x="250" y="38"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="110" y="-210"/></Anchor></Anchors>
+				<Anchors><Anchor point="CENTER"><Offset x="-150" y="0"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearPostHistory"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Stacking Preferences">
 				<Size x="250" y="38"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="351" y="-170"/></Anchor></Anchors>
+				<Anchors><Anchor point="CENTER"><Offset x="100" y="40"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearStackPrefs"/></Scripts>
 			</Button>
 
 			<Button inherits="UIPanelButtonTemplate" text="Clear Shopping Lists">
 				<Size x="250" y="38"/>
-				<Anchors><Anchor point="TOPLEFT"><Offset x="351" y="-210"/></Anchor></Anchors>
+				<Anchors><Anchor point="CENTER"><Offset x="100" y="0"/></Anchor></Anchors>
 				<Scripts><OnClick function="Atr_OnClick_ClearShopLists"/></Scripts>
 			</Button>
 		</Frames>
