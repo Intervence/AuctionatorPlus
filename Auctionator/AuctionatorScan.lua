@@ -1450,10 +1450,9 @@ function Atr_PruneScanDB(verbose)
 	collectgarbage  ("collect");
 
 	local startMem = Atr_GetAuctionatorMemString();
-
 	local dbCopy = {};
-
 	local todayDays	= Atr_GetScanDay_Today();
+	local corruptedTables = 0
 
 	Atr_MigtrateMaxHistAge();
 
@@ -1474,52 +1473,59 @@ function Atr_PruneScanDB(verbose)
 	end
 	
 	for itemName, info in pairs (gAtr_ScanDB) do
-	
-		local mostRecentDay = -1;
-		
-		-- first pass over item
-		
-		for key, price in pairs (info) do
-			char1 = string.sub (key, 1, 1);
-			if (char1 == "H") then
-				day = tonumber (string.sub(key, 2));
-				mostRecentDay	= math.max (day, mostRecentDay);
+
+		if type(info) ~= "table" then 					--remove array entry if data is not a array (happens if scan was interrupted)
+			corruptedTables = corruptedTables + 1
+			x = x + 1
+		else
+			local mostRecentDay = -1;
+
+			-- first pass over item
+			for key, price in pairs (info) do
+						char1 = string.sub (key, 1, 1);
+						if (char1 == "H") then
+							day = tonumber (string.sub(key, 2));
+							mostRecentDay	= math.max (day, mostRecentDay);
+						end
 			end
-		end
-		
-		-- decide if the item should be retained
-		
-		if (mostRecentDay == -1 or mostRecentDay >= itemCutoff) then
-		
-			dbCopy[itemName] = {};
-			y = y + 1;
+
+			-- decide if the item should be retained
 			
-			for key, price in pairs (info) do			-- second pass over item
-				doCopy = true;
+			if (mostRecentDay == -1 or mostRecentDay >= itemCutoff) then
+			
+				dbCopy[itemName] = {};
+				y = y + 1;
 				
-				char1 = string.sub (key, 1, 1);
-				if (char1 == "H" or char1 == "L") then
-					day = tonumber (string.sub(key, 2));
-					if (day < histCutoff and day ~= mostRecentDay) then
-						doCopy = false;
-						h = h + 1;
+				for key, price in pairs (info) do			-- second pass over item
+					doCopy = true;
+					
+					char1 = string.sub (key, 1, 1);
+					if (char1 == "H" or char1 == "L") then
+						day = tonumber (string.sub(key, 2));
+						if (day < histCutoff and day ~= mostRecentDay) then
+							doCopy = false;
+							h = h + 1;
+						end
+					end
+					
+					if (doCopy) then
+						dbCopy[itemName][key] = price;
+						z = z + 1;
 					end
 				end
-				
-				if (doCopy) then
-					dbCopy[itemName][key] = price;
-					z = z + 1;
-				end
+			else
+				x = x + 1;
 			end
-		else
-			x = x + 1;
+	
 		end
-		
-		
 	end
 
 	zc.ClearTable (gAtr_ScanDB);
 	zc.CopyDeep (gAtr_ScanDB, dbCopy);
+
+	if corruptedTables > 0 then
+		zc.msg_anm("Cleared some corrupted db entries")
+	end
 	
 	dbCopy = nil;
 	
