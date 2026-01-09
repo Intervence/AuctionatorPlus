@@ -347,6 +347,7 @@ function Atr_FullScanUpdateDB()
 
 	Atr_FullScanDone:Enable();
 	Atr_FullScanStatus:SetText ("");
+	Atr_ReloadUI:Show();
 	
 	Atr_FSR_scanned_count:SetText	(gNumScanned);
 	Atr_FSR_added_count:SetText		(gNumAdded);
@@ -380,6 +381,7 @@ end
 function Atr_ShowFullScanFrame()
 
 	Atr_FullScanHTML:Show();
+	Atr_ReloadUI:Hide();
 	Atr_FullScanResults:Hide();
 	
 	
