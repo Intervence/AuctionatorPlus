@@ -1318,6 +1318,16 @@
 				</Scripts>
 			</Button>
 
+			<Button name="Atr_ReloadUI" inherits="UIPanelButtonTemplate" text="Reload">
+				<Size><AbsDimension x="80" y="22"/>	</Size>
+				<Anchors><Anchor point="BOTTOMLEFT"><Offset><AbsDimension x="30" y="40"/></Offset></Anchor></Anchors>
+				<Scripts>
+					<OnClick>
+						ReloadUI();
+					</OnClick>
+				</Scripts>
+			</Button>
+
 			<Button name="Atr_FullScanStartButton" inherits="UIPanelButtonTemplate" text="Start Scanning">
 				<Size><AbsDimension x="120" y="22"/>	</Size>
 				<Anchors><Anchor point="RIGHT" relativeTo="Atr_FullScanDone" relativePoint="LEFT"><Offset><AbsDimension x="-4" y="0"/></Offset></Anchor></Anchors>
