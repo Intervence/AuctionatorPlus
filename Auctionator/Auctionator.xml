@@ -374,7 +374,7 @@
 
 				<FontString name="Atr_ActiveItems_Text" inherits="GameFontHighlightSmall" text="Active Items" justifyH="CENTER">
 					<Size x="300"/>
-					<Anchors><Anchor point="TOP" x="-360" y="-40"/></Anchors>
+					<Anchors><Anchor point="TOP" x="-360" y="-55"/></Anchors>
 				</FontString>
 
 				<FontString name="AuctionatorMessageFrame" inherits="GameFontNormal">
