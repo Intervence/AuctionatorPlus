@@ -258,6 +258,7 @@ AtrL["Spanish translation courtesy of %s"] = "Traducción a español por cortes�
  AtrL["Really delete the shopping list?%s"] = "¿Realmente eliminar la lista de compras?%s"
  AtrL["Rename"] = "Renombrar"
  AtrL["Shopping Lists"] = "Listas de compras"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "Puedes editar la lista de arriba manualmente\no arrastrar un objeto a esta ventana y usar el botón \"+\""
 
 --submenu: Database
  AtrL["Database"] = "Base de datos"

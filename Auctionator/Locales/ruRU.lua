@@ -264,6 +264,7 @@ AtrL["Select an item from the list on the left\n or type a search term above to 
  AtrL["Really delete the shopping list?%s"] = "Действительно удалить список покупок?%s"
  AtrL["Rename"] = "Переименовать"
  AtrL["Shopping Lists"] = "Списки покупок"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "Вы можете редактировать список выше напрямую\nили же можете перетянуть вещь в это окно и нажать кнопку \"+\""
 
 --submenu: Database
  AtrL["Database"] = "База данных"
