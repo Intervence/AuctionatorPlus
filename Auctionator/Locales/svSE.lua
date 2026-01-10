@@ -271,9 +271,10 @@ AtrL["You may have at most 40 single-stack (x1)\nauctions posted for this item.\
  AtrL["Really delete the shopping list?%s"] = "Vill du verkligen radera inköpslistan?%s"
  AtrL["Rename"] = "Byt namn"
  AtrL["Shopping Lists"] = "Inköpslistor"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "Du kan redigera listan ovan manuellt\neller dra ett föremål hit och använda \"+\"-knappen"
 
 -- submenu: Database
-AtrL["Database"] = "Databas"
+ AtrL["Database"] = "Databas"
 
 --(end auto-translated)
 end

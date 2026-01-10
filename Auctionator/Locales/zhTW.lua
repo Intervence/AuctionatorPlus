@@ -293,6 +293,7 @@ AtrL["yours"] = "你的"
  AtrL["Really delete the shopping list?%s"] = "確定要刪除購物清單嗎？%s"
  AtrL["Rename"] = "重新命名"
  AtrL["Shopping Lists"] = "購物清單"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "你可以手動編輯上面的清單\n或是將物品拖曳到此視窗並使用 \"+\" 按鈕"
 
 --submenu: Database
  AtrL["Database"] = "資料庫"

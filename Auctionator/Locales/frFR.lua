@@ -268,6 +268,7 @@ AtrL["undercutting configuration saved"] = "options de sous-cotation sauvegard\1
  AtrL["Really delete the shopping list?%s"] = "Supprimer cette liste d'achats?%s"
  AtrL["Rename"] = "Renommer"
  AtrL["Shopping Lists"] = "Listes d'achats"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "Vous pouvez modifier la liste ci-dessus manuellement\nou glisser un objet ici et utiliser le bouton \"+\""
 
 --submenu: Database
 AtrL["Database"] = "Base de données"

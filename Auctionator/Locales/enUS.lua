@@ -244,6 +244,7 @@ AtrL["Select an item from the list on the left\n or type a search term above to 
  AtrL["Really delete the shopping list?%s"] = ""
  AtrL["Rename"] = ""
  AtrL["Shopping Lists"] = ""
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "You can edit the list above manually\nor you can drag item into this window and use \"+\" button"
 
 --submenu: Database
  AtrL["Database"] = ""

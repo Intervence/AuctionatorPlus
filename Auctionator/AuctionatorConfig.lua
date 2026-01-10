@@ -1174,24 +1174,27 @@ function Atr_OnClick_ShpList_Edit()
 		text = text..slist.items[n]
 	end
 
-	Atr_ShpList_SaveBut:Show()
-	Atr_ShpList_SelectAllBut:Hide()
-	Atr_ShpList_ImportSaveBut:Hide()
+	Atr_ShpList_BTN_Save:Show()
+	Atr_ShpList_Import_BTN_SelectAll:Hide()
+	Atr_ShpList_Import_BTN_Save:Hide()
 
-	Atr_ShpList_Explanation:SetText("")
+	Atr_ShpList_Explanation:SetText(ZT("SHPLIST_EDIT_EXPLANATION"))
 	
-	Atr_ShpList_Edit_Name:SetText(slist.name)
+	Atr_ShpList_Edit_Name:SetText("Editing list: " .. slist.name)
 	
-	Atr_ShpList_Edit_Text:SetSpacing(3)
-	Atr_ShpList_Edit_Text:SetPoint ("TOPLEFT", 0, -20)
-	
-	Atr_ShpList_Edit_Text:SetText(text)
+	-- [Shoplist editbox]
+	Atr_ShpList_Edit_TXTBOX_List:SetSpacing(3)
+	Atr_ShpList_Edit_TXTBOX_List:SetPoint ("TOPLEFT", 0, -10)
+	Atr_ShpList_Edit_TXTBOX_List:SetText(text)
 	
 	Atr_ShpList_Edit_Frame:Show()
-	
-	Atr_ShpList_Edit_Text:SetFocus()
-	Atr_ShpList_Edit_Text:HighlightText(0,0)
-
+	--
+	----Atr_ShpList_Edit_TXTBOX_List:SetFocus()
+	--Atr_ShpList_Edit_TXTBOX_List:HighlightText(0,0)
+	Atr_Shplist_Edit_NameField:Show()
+	Atr_Shplist_Edit_NameField:SetFocus()
+    Atr_Shplist_Edit_NameField:HighlightText(0,0)
+	Atr_Shplist_Edit_BTN_Add:Show()
 end
 
 -----------------------------------------
@@ -1202,7 +1205,7 @@ function Atr_ShpList_Edit_Save()
 
 	slist.items = {}
 	
-	local text  = Atr_ShpList_Edit_Text:GetText()
+	local text  = Atr_ShpList_Edit_TXTBOX_List:GetText()
 	local lines = { strsplit("\n", text) }
 
 	if (lines ~= nil) then
@@ -1243,21 +1246,23 @@ end
 
 function Atr_OnClick_ShpList_Import()
 
-	Atr_ShpList_SaveBut:Hide()
-	Atr_ShpList_SelectAllBut:Hide()
-	Atr_ShpList_ImportSaveBut:Show()
+	Atr_ShpList_BTN_Save:Hide()
+	Atr_ShpList_Import_BTN_SelectAll:Hide()
+	Atr_ShpList_Import_BTN_Save:Show()
 	
 	Atr_ShpList_Explanation:SetText("Paste text that was previously exported into the text area to the left.")
 	
 	Atr_ShpList_Edit_Name:SetText("Import")
 	
-	Atr_ShpList_Edit_Text:SetText("")
-	Atr_ShpList_Edit_Text:SetSpacing(3)
-	Atr_ShpList_Edit_Text:SetPoint ("TOPLEFT", 0, -20)
+	Atr_ShpList_Edit_TXTBOX_List:SetText("")
+	Atr_ShpList_Edit_TXTBOX_List:SetSpacing(3)
+	Atr_ShpList_Edit_TXTBOX_List:SetPoint ("TOPLEFT", 0, -20)
 	
 	Atr_ShpList_Edit_Frame:Show()
 
-	Atr_ShpList_Edit_Text:SetFocus()
+	Atr_ShpList_Edit_TXTBOX_List:SetFocus()
+	Atr_Shplist_Edit_NameField:Hide()
+	Atr_Shplist_Edit_BTN_Add:Hide()
 
 end
 
@@ -1265,7 +1270,7 @@ end
 
 function Atr_ShpList_Edit_ImportSave()
 
-	local text  = Atr_ShpList_Edit_Text:GetText()
+	local text  = Atr_ShpList_Edit_TXTBOX_List:GetText()
 	
 	local lines = { strsplit("\n", text) }
 
@@ -1317,7 +1322,7 @@ end
 
 function Atr_SList_ImportCore (doOverwrite)
 
-	local text  = Atr_ShpList_Edit_Text:GetText()
+	local text  = Atr_ShpList_Edit_TXTBOX_List:GetText()
 	
 	local lines = { strsplit("\n", text) }
 
@@ -1396,27 +1401,6 @@ function Atr_SList_Conflict_OnClick(self)
 	Atr_SList_Conflict_OKAY:Enable ()
 end
 
---[[
-
-*** Ethereal Ink
-Ancient Lichen
-Dreaming Glory
-Felweed
-Netherbloom
-Nightmare vine
-Ragveil
-Terocone
-
-*** Celestial Ink
-Arthas' tears
-Blindweed
-Firebloom
-Ghost Mushroom
-Gromsblood
-Purple Lotus
-Sungrass
-Violet Pigment
-]]--
 -----------------------------------------
 
 function Atr_ShpList_Export_GetText(slist)
@@ -1444,22 +1428,76 @@ function Atr_OnClick_ShpList_Export(self)
 		text = text..Atr_ShpList_Export_GetText (AUCTIONATOR_SHOPPING_LISTS[index])
 	end
 
-	Atr_ShpList_SaveBut:Hide()
-	Atr_ShpList_SelectAllBut:Show()
-	Atr_ShpList_ImportSaveBut:Hide()
+	Atr_ShpList_BTN_Save:Hide()
+	Atr_ShpList_Import_BTN_SelectAll:Show()
+	Atr_ShpList_Import_BTN_Save:Hide()
 
 	Atr_ShpList_Explanation:SetText("Click Select All, type Ctrl-C to copy the text and then paste into any text document.")
 	
 	Atr_ShpList_Edit_Name:SetText("Export")
 	
-	Atr_ShpList_Edit_Text:SetSpacing(3)
-	Atr_ShpList_Edit_Text:SetPoint ("TOPLEFT", 0, -20)
+	Atr_ShpList_Edit_TXTBOX_List:SetSpacing(3)
+	Atr_ShpList_Edit_TXTBOX_List:SetPoint ("TOPLEFT", 0, -20)
 	
-	Atr_ShpList_Edit_Text:SetText(text)
+	Atr_ShpList_Edit_TXTBOX_List:SetText(text)
 	
 	Atr_ShpList_Edit_Frame:Show()
+	Atr_Shplist_Edit_NameField:Hide()
+	Atr_Shplist_Edit_BTN_Add:Hide()
 
 end
+
+-----------------------------------------
+-- [Shoplist edit frame]
+-- Add new entry to (existing) shopping list
+function Atr_AddToShoppingListEdit()
+    local inputField = Atr_Shplist_Edit_NameField
+    local editBox = Atr_ShpList_Edit_TXTBOX_List
+    local addButton = Atr_Shplist_Edit_BTN_Add
+    
+    if inputField and editBox then
+        local text = inputField:GetText()
+        if text and text ~= "" then
+            local currentText = editBox:GetText()
+            if currentText == "" then
+                editBox:SetText(text)
+            else
+                editBox:SetText(currentText .. "\n" .. text)
+            end
+            inputField:SetText("")
+            inputField:SetFocus()
+        end
+    end
+end
+
+-- Drag'n'drop handler. Does SetText(framename) on item drag
+function Atr_ShplistInput_OnReceiveDrag(framename)
+    local type, id, link = GetCursorInfo()
+    if type == "item" then
+        local itemName
+        if link then
+            local _, _, name = string.find(link, "|h%[(.-)%]|h")	-- try to get from itemlink
+            itemName = name
+        end
+
+        if not itemName and id then 								-- GetItemInfo fallback
+            itemName = GetItemInfo(id)
+        end
+             
+        if not itemName then 										-- if everything else failed put it as is
+            itemName = link or ""
+        end
+        
+        framename:SetText(itemName)
+        ClearCursor()
+    end
+end
+
+-- "Add" btn click
+function Atr_ShplistAddButton_OnClick(self)
+    Atr_AddToShoppingListEdit()
+end
+-- [/Shoplist edit frame]
 
 -------------------------------------------------------------------------------------------------------
 

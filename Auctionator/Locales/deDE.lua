@@ -302,8 +302,9 @@ AtrL["trade volume"] = "Handelsvolumen"
  AtrL["Really delete the shopping list?%s"] = "Einkaufsliste wirklich löschen?%s"
  AtrL["Rename"] = "Umbenennen"
  AtrL["Shopping Lists"] = "Einkaufslisten"
+ AtrL["SHPLIST_EDIT_EXPLANATION"] = "Du kannst die Liste oben manuell bearbeiten\noder ein Gegenstand hierher ziehen und die \"+\" Taste nutzen"
 
 -- submenu: Database
-AtrL["Database"] = "Datenbank"
+ AtrL["Database"] = "Datenbank"
 --(end auto-translated)
 end
