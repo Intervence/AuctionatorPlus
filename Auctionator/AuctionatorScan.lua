@@ -394,10 +394,10 @@ function AtrSearch:AnalyzeResultsPage()
 
 	local numBatchAuctions, totalAuctions = Atr_GetNumAuctionItems("list");
 
-	if (self.current_page == 1 and totalAuctions > 9999) then -- give Blizz servers a break
-		Atr_Error_Display (ZT("Too many results\n\nPlease narrow your search"));
-		return true;  -- done
-	end
+	--if (self.current_page == 1 and totalAuctions > 15000) then -- give Blizz servers a break
+	--	Atr_Error_Display (ZT("Too many results\n\nPlease narrow your search"));
+	--	return true;  -- done
+	--end
 
 	local msg
 
