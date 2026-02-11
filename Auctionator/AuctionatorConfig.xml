@@ -844,8 +844,8 @@
 
 	
 	<!-- Atr_ShpList_Edit_Frame -->
-    <Frame name="Atr_ShpList_Edit_Frame" frameStrata="DIALOG" enableMouse="true" hidden="true">
-        <Size x="500" y="350"/>
+    <Frame name="Atr_ShpList_Edit_Frame" frameStrata="DIALOG" inherits="Atr_OptionsPanelTemplate" parent="UIParent" enableMouse="true" hidden="true">
+        <Size x="900" y="600"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -877,8 +877,8 @@
 		</Layers>
 
 		<Frames>
-			<ScrollFrame name="$parentScrollFrame" inherits="UIPanelScrollFrameTemplate">
-				<Size x="180"/>	
+			<ScrollFrame name="$parentScrollFrame" inherits="UIPanelScrollFrameTemplate" enableMouse="true">
+				<Size x="700" y="250"/>	
 				<Anchors>
 					<Anchor point="TOPLEFT"><Offset x="50" y="-62"/></Anchor>
 					<Anchor point="BOTTOM"><Offset y="120"/></Anchor>
@@ -887,14 +887,28 @@
 					<BackgroundInsets><AbsInset left="-20" right="-23" top="-3" bottom="-3"/></BackgroundInsets>
 					<TileSize><AbsValue val="32"/></TileSize>
 				</Backdrop>
+				<Scripts>
+					<OnMouseDown>
+						Atr_ShpList_Edit_TXTBOX_List:SetFocus();
+					</OnMouseDown>
+				</Scripts>
 				<Layers>
 				    <Layer level="ARTWORK">
+				    	<!-- upper slider texture-->
 				        <Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
-				            <Size x="31" y="106"/>
+				            <Size x="31" y="250"/>
 				            <Anchors><Anchor point="TOPRIGHT" x="29" y="3"/></Anchors>
-				            <TexCoords left="0" right="0.484375" top="0" bottom="0.4140625"/>
+				            <TexCoords left="0" right="0.484375" top="0" bottom="1"/>
 				        </Texture>
 
+				        <!-- middle slider texture-->
+				        <Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
+				            <Size x="31" y="230"/>
+				            <Anchors><Anchor point="RIGHT" x="29" y="-3"/></Anchors>
+				            <TexCoords left="0" right="0.484375" top="0.2" bottom="1"/>
+				        </Texture>
+
+				        <!-- upper slider texture-->
 				        <Texture file="Interface\PaperDollInfoFrame\UI-Character-ScrollBar">
 				            <Size x="31" y="106"/>
 				            <Anchors><Anchor point="BOTTOMRIGHT" x="29" y="-3"/></Anchors>
@@ -905,7 +919,7 @@
 		
 				<ScrollChild>
 					<EditBox name="Atr_ShpList_Edit_TXTBOX_List" multiLine="true" letters="4000" autoFocus="false">
-						<Size x="180" y="230" />	
+						<Size x="760" y="230" />	
 						<Anchors>
 							<Anchor point="TOPLEFT"><Offset x="20" y="-50"/></Anchor>
 						</Anchors>
